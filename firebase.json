@@ -1,0 +1,1 @@
+{"firestore":{"rules":"firestore.rules","indexes":"firestore.indexes.json"},"flutter":{"platforms":{"dart":{"lib/firebase_options.dart":{"projectId":"chat-app-b0c25","configurations":{"macos":"1:184993023076:ios:008df4ad7c90a12ce98b71","windows":"1:184993023076:web:33e67a4b9b4e8c47e98b71"}}}}}}
