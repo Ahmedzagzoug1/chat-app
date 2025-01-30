@@ -114,6 +114,8 @@ class _LoginPageState extends State<LoginPage> {
                       isLoading = false;
                       setState(() {});
                     } else {}
+                                          saveEmail(email: this.email!);
+
                   },
                   text: 'LOGIN',
                 ),

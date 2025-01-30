@@ -16,7 +16,8 @@ class ChatPage extends StatelessWidget {
   ChatPage({super.key});
   @override
   Widget build(BuildContext context) {
-      var email = ModalRoute.of(context)!.settings.arguments;
+//ModalRoute.of(context)!.settings.arguments ??
+    var email = getEmail().toString();
     return StreamBuilder<QuerySnapshot>(
       stream: messages.orderBy(kCreatedAt, descending: true).snapshots(),
       builder: (context, snapshot) {
@@ -77,7 +78,7 @@ class ChatPage extends StatelessWidget {
                               duration: const Duration(milliseconds: 500),
                               curve: Curves.easeIn);
                         },
-                        child:const Icon(
+                        child: const Icon(
                           Icons.send,
                           color: kPrimaryColor,
                         ),

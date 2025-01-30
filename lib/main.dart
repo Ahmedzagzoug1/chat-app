@@ -1,3 +1,4 @@
+import 'package:chat_app/constants.dart';
 import 'package:chat_app/pages/chat_page.dart';
 import 'package:chat_app/pages/login_page.dart';
 import 'package:chat_app/pages/resgister_page.dart';
@@ -29,7 +30,7 @@ class ScholarChat extends StatelessWidget {
         RegisterPage.id: (context) => const RegisterPage(),
         ChatPage.id: (context) => ChatPage(),
       },
-      initialRoute: LoginPage.id,
+      initialRoute:(getEmail()!=null)? ChatPage.id :LoginPage.id,
     );
   }
 }

@@ -60,7 +60,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(
                   height: 75,
                 ),
-               const Row(
+                const Row(
                   children: [
                     Text(
                       'REGISTER',
@@ -80,7 +80,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                   hintText: 'Email',
                 ),
-               const SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 CustomFormTextField(
@@ -90,7 +90,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   },
                   hintText: 'Password',
                 ),
-             const   SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 CustomButon(
@@ -101,7 +101,8 @@ class _RegisterPageState extends State<RegisterPage> {
                       try {
                         await registerUser();
 
-                        Navigator.pushNamed(context, ChatPage.id,arguments: email);
+                        Navigator.pushNamed(context, ChatPage.id,
+                            arguments: email);
                       } on FirebaseAuthException catch (ex) {
                         if (ex.code == 'weak-password') {
                           showSnackBar(context, 'weak password');
@@ -115,16 +116,18 @@ class _RegisterPageState extends State<RegisterPage> {
                       isLoading = false;
                       setState(() {});
                     } else {}
+                                          saveEmail(email: this.email!);
+
                   },
                   text: 'REGISTER',
                 ),
-               const SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                  const  Text(
+                    const Text(
                       'already have an account?',
                       style: TextStyle(
                         color: Colors.white,
@@ -134,7 +137,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child:const Text(
+                      child: const Text(
                         '  Login',
                         style: TextStyle(
                           color: Color(0xffC7EDE6),
